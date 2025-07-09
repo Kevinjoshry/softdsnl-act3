@@ -139,6 +139,8 @@ print("Prediction:", le.inverse_transform(prediction)[0])
 ### 1. Create Django Project and App
 
 ```bash
+mkdir ml_api_project
+cd ml_api_project
 django-admin startproject ml_api_project .
 python manage.py startapp ml_api
 ```
