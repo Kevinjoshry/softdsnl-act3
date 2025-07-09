@@ -130,6 +130,14 @@ prediction = model.predict(sample)
 print("Prediction:", le.inverse_transform(prediction)[0])
 ```
 
+### 6. Run `train_model.py`
+
+```python
+# train_model.py
+
+python train_model.py
+```
+
 ---
 
 ## 🌐 Part 2: Django API Setup
@@ -186,7 +194,11 @@ urlpatterns = [
 
 ---
 
-### 5. Create `ml_api/views.py`
+### 5. Copy model.mkl and label_encoder.pkl to ml_api folder
+
+---
+
+### 6. Create `ml_api/views.py`
 
 ```python
 # ml_api/views.py
@@ -195,6 +207,11 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 import joblib
+import os
+from django.conf import settings
+
+model_path = os.path.join(settings.BASE_DIR, "ml_api", "model.pkl")
+encoder_path = os.path.join(settings.BASE_DIR, "ml_api", "label_encoder.pkl")
 
 model = joblib.load("model.pkl")
 label_encoder = joblib.load("label_encoder.pkl")
