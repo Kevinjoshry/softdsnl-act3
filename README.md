@@ -196,6 +196,12 @@ urlpatterns = [
 
 ### 5. Copy model.mkl and label_encoder.pkl to ml_api folder
 
+These files are generated in the ml-custom-dataset folder when you ran 
+
+```python
+python train_model.py
+```
+
 ---
 
 ### 6. Create `ml_api/views.py`
@@ -232,7 +238,7 @@ class PredictView(APIView):
 
 ---
 
-### 6. Run Server
+### 7. Run Server
 
 ```bash
 python manage.py runserver
