@@ -1,0 +1,11 @@
+engine_size,horsepower,car_type
+1.0,70,hatchback
+2.0,150,sedan
+3.5,280,suv
+1.6,110,coupe
+2.2,160,convertible
+2.5,175,wagon
+4.0,300,pickup
+3.0,250,van
+3.8,320,crossover
+5.0,450,sports_car
